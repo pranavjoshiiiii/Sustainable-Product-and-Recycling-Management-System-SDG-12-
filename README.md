@@ -13,9 +13,14 @@ This project is a structured, menu-driven console application developed. It is d
 
 
 ## Group Members and Roles
-- ***Abdul Bari Iqbal Chaudhry*** - (Write Here)
-- ***Vikram Khajuria*** - (Write Here)
-- ***Pranav Joshi*** - (Write Here)
+- ***Abdul Bari Iqbal Chaudhry*** - Technical & Documentation 
+- ***Vikram Khajuria*** - Manages github repository, branches and ensures clean code principles
+- ***Pranav Joshi*** - UI console & code 
+
+ ***Shared Roles ***
+- Shared roles are to learn the architecture together and implement things by collaborations.
+- Goal is to learn the coding, logic seperations, testing and mock objects.
+  
 
 
 ## Requirement Extraction(Domain Concepts)
