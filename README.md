@@ -23,7 +23,7 @@ This project is a structured, menu-driven console application developed. It is d
   
 
 
-## Requirement Extraction(Domain Concepts)
+## Requirement Extraction
 
 ### Functional Requirements:
 - Product Management
@@ -42,4 +42,14 @@ This project is a structured, menu-driven console application developed. It is d
   - Mixed-Material Documentation
 
 ### Non-Functional Requirements:
--
+- Arquitectural
+  - Application Type: Menu Driven Console
+  - Layered Arquitecture: Presentation & Domain visualization 
+  - Strict Separation Between UI & Business Logic
+  - Strategy Patterns: Documented
+  - JUnit Tests: No console UI code in tests
+
+- Qualities & Constraints
+  - Maintainability
+  - Continuous Integration: Builds projects and runs tests automatically
+  - Meaningful commits
