@@ -53,3 +53,18 @@ This project is a structured, menu-driven console application developed. It is d
   - Maintainability
   - Continuous Integration: Builds projects and runs tests automatically
   - Meaningful commits
+
+
+## Domain Concept Identification
+
+| Concepts(Nouns) | Responsibilities(verbs) |
+|------|-----|
+| Product | Create |
+| Material | List |
+| Impact | View |
+| Category | Calculate |
+| Lifespan | Define |  
+| Strategy | Provide |
+| Recycling Guidance | Replace |
+
+## System Boundaries
