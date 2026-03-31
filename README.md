@@ -68,3 +68,8 @@ This project is a structured, menu-driven console application developed. It is d
 | Recycling Guidance | Replace |
 
 ## System Boundaries
+
+
+## UML Diagram
+
+![UML Diagram](uml.jpg)
