@@ -73,3 +73,35 @@ This project is a structured, menu-driven console application developed. It is d
 ## UML Diagram
 
 ![UML Diagram](uml.jpg)
+
+Three-week project overview:
+
+Week 1 – Understanding the System
+In Week 1, we focused on understanding the problem and what the system is supposed to do. We
+identified key functional requirements such as managing products, calculating environmental
+impact, and providing recycling guidance. We also defined the system boundary by deciding what is
+inside the system and what is outside, like UI frameworks.
+We extracted important domain concepts like Product, Material, and RecyclingCategory, and
+classified them into entities, value objects, and services. Finally, we created a basic UML diagram
+and a README to document our understanding. Overall, Week 1 was about building a clear
+foundation.
+  
+Week 2 – Building the Domain Model
+In Week 2, we structured the system using CRC cards. For each class, we defined its
+responsibilities, what data it owns, and which other classes it collaborates with. This helped us
+assign responsibilities more clearly.
+We identified classes such as Product, Material, RecyclingCategory, RecyclingGuidance, and
+ImpactCalculationStrategy. Then we converted these into a UML Class Diagram (v1). At this stage,
+the structure was clearer, but still had design issues. Week 2 was mainly about organizing the
+system into meaningful classes.
+  
+Week 3 – Improving the Design
+In Week 3, we reviewed our model and identified design problems using principles like SRP, OCP,
+and DIP.
+We noticed that some classes, especially Product, had too many responsibilities. This violates the
+Single Responsibility Principle because one class should have only one reason to change.
+To fix this, we separated responsibilities. Product now only represents product data, while
+calculation logic is handled by strategy classes and recycling logic by a separate service.
+We also introduced a strategy-based design for impact calculation, which follows the Open/Closed
+Principle. This allows us to add new calculation methods without modifying existing code.
+Overall, Week 3 improved the design by making it more flexible, maintainable, and easier to extend.
