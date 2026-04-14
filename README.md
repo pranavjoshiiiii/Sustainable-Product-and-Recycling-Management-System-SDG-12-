@@ -129,15 +129,5 @@ The system follows a strict four-layer architecture where dependencies point inw
 
 `ImpactCalculationStrategy` is defined as an interface in `Domain`. The interface belongs to the layer that uses it — `ProductService` in `Application` depends on the abstraction. `SimpleSumStrategy` and `WeightedByLifespanStrategy` implement it. `Main` decides which concrete strategy to inject at runtime.
 
-### Walking Skeleton
-
-`Main` serves as the composition root and proves the wiring works end-to-end:
-
-```java
-SimpleSumStrategy strategy = new SimpleSumStrategy();
-ProductService productService = new ProductService(strategy);
-ConsoleUI ui = new ConsoleUI(productService);
-ui.menuLoop();
-```
 
 [Week 4 UML](UmlUpdated_Week_4.pdf)
