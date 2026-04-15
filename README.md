@@ -107,7 +107,7 @@ Overall, Week 3 improved the design by making it more flexible, maintainable, an
 
 ### Package Structure
 
-The system follows a strict four-layer architecture where dependencies point inward — outer layers depend on inner layers, never the reverse.
+The system follows a strict four-layer architecture where dependencies point inward outer layers depend on inner layers, never the reverse.
 
 ### Package Responsibilities
 
