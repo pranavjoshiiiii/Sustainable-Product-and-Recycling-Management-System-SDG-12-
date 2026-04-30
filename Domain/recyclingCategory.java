@@ -1,21 +1,25 @@
 package Domain;
 
-public class recyclingCategory {
+public enum RecyclingCategory {
+    GENERAL("General Waste", "Mixed materials"),
+    PLASTIC("Plastic", "Polymer-based materials"),
+    METAL("Metal", "Metallic materials"),
+    GLASS("Glass", "Glass-based materials"),
+    ORGANIC("Organic", "Biodegradable materials");
 
-    private String lable;
-    private String material;
+    private String label;
+    private String materialComposition;
 
-    public recyclingCategory(String lable, String material){
-        this.lable = lable;
-        this.material = material;
+    RecyclingCategory(String label, String materialComposition) {
+        this.label = label;
+        this.materialComposition = materialComposition;
     }
 
-    public String getLable() {
-        return lable;
+    public String getLabel() {
+        return label;
     }
 
-    public String getMaterial() {
-        return material;
+    public String getMaterialComposition() {
+        return materialComposition;
     }
-    
 }

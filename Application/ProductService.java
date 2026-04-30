@@ -1,20 +1,24 @@
 package Application;
 
+import Domain.ImpactCalculationStrategy;
+import Domain.Product;
+
 import java.util.ArrayList;
 import java.util.List;
-import Domain.Product;
-import Logic.impactCalculationStrategy;
 
 public class ProductService {
-    private List<Product> products = new ArrayList<>();
-    private impactCalculationStrategy strategy;
 
-    public ProductService(impactCalculationStrategy strategy) {
+    private ImpactCalculationStrategy strategy;
+    private List<Product> products;
+
+    public ProductService(ImpactCalculationStrategy strategy) {
         this.strategy = strategy;
+        this.products = new ArrayList<>();
     }
 
     public void createProduct(String name, String type, int lifespan) {
-        products.add(new Product(name, type, lifespan, new ArrayList<>()));
+        Product product = new Product(name, type, lifespan);
+        products.add(product);
     }
 
     public List<Product> listProducts() {
