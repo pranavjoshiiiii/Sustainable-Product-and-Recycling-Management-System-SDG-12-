@@ -131,3 +131,41 @@ The system follows a strict four-layer architecture where dependencies point inw
 
 
 [Week 4 UML](UmlUpdated_Week_4.pdf)
+
+
+## Week 7 — Design Patterns: Strategy & Factory
+
+### Strategy Pattern
+
+**What problem did it solve?**
+Before the Strategy pattern, impact calculation logic would have lived inside `productService` as a hard-coded `if/else` block. Every time a new calculation rule was needed, that method would have to be edited. The logic was not isolated or testable on its own.
+
+**Why was the pattern appropriate?**
+The system needs more than one impact calculation algorithm (`simpleSumStrategy` and `weightedByLifespanStrategy`). Both operate on the same input (`product`) and produce the same output (`double`). This is exactly the problem Strategy is designed for.
+
+**What improved?**
+- `productService.calculateImpact()` delegates entirely to the injected strategy — no calculation logic inside it.
+- Each strategy can be read, tested, and changed independently.
+- Adding a new calculation rule means adding a new class — no existing code needs to change. Satisfies OCP.
+- `productService` depends on the interface, not a concrete class. Satisfies DIP.
+
+**What would happen without it?**
+Adding a new algorithm would require editing `productService` directly. Testing one rule in isolation would not be possible without running the full service.
+
+---
+
+### Factory Pattern
+
+**What problem did it solve?**
+Without the factory, `Main.java` directly instantiated `new simpleSumStrategy()`. Creation logic had no central home and would need to be repeated if strategy selection were needed in multiple places.
+
+**Why was the pattern appropriate?**
+Strategy selection depends on user input. That decision logic belongs in one place. `strategyFactory.getAvailableStrategies()` provides the options and `create(int choice)` returns the correct strategy — `Main` never names a concrete strategy class directly.
+
+**What improved?**
+- `Main.java` no longer imports any concrete strategy class.
+- Adding a new strategy requires one new class and one new entry in `getAvailableStrategies()`. Nothing else changes.
+- `consoleUi` stays fully decoupled from concrete strategy types.
+
+**What would happen without it?**
+The creation `if/else` would sit inside `Main` or worse, inside the UI. Any future feature needing a strategy would duplicate that block, increasing coupling.
