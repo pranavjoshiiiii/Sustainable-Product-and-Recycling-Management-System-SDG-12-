@@ -1,12 +1,12 @@
 package Domain;
 
-public class User {
+public class user {
 
     private String name;
     private String email;
     private String credentials;
 
-    public User(String name, String email, String credentials) {
+    public user(String name, String email, String credentials) {
         this.name = name;
         this.email = email;
         this.credentials = credentials;

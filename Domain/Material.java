@@ -1,13 +1,13 @@
 package Domain;
 
-public class Material {
+public class material {
 
     private String name;
     private double impactValue;
     private String instructions;
-    private RecyclingCategory recyclingCategory;
+    private recyclingCategory recyclingCategory;
 
-    public Material(String name, double impactValue, String instructions, RecyclingCategory recyclingCategory) {
+    public material(String name, double impactValue, String instructions, recyclingCategory recyclingCategory) {
         this.name = name;
         this.impactValue = impactValue;
         this.instructions = instructions;
@@ -26,7 +26,7 @@ public class Material {
         return instructions;
     }
 
-    public RecyclingCategory getRecyclingCategory() {
+    public recyclingCategory getRecyclingCategory() {
         return recyclingCategory;
     }
 }

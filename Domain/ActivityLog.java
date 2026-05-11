@@ -3,11 +3,11 @@ package Domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityLog {
+public class activityLog {
 
     private List<String> activityHistory;
 
-    public ActivityLog() {
+    public activityLog() {
         activityHistory = new ArrayList<>();
     }
 

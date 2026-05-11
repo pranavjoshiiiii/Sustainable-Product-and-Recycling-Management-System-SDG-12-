@@ -1,21 +1,21 @@
 package Presentation;
 
-import Application.MaterialService;
-import Application.ProductService;
-import Domain.Product;
-import Domain.RecyclingGuidance;
+import Application.materialService;
+import Application.productService;
+import Domain.product;
+import Domain.recyclingGuidance;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class ConsoleUI {
+public class consoleUi {
 
-    private ProductService productService;
-    private MaterialService materialService;
-    private RecyclingGuidance recyclingGuidance;
+    private productService productService;
+    private materialService materialService;
+    private recyclingGuidance recyclingGuidance;
     private Scanner scanner;
 
-    public ConsoleUI(ProductService productService, MaterialService materialService, RecyclingGuidance recyclingGuidance) {
+    public consoleUi(productService productService, materialService materialService, recyclingGuidance recyclingGuidance) {
         this.productService = productService;
         this.materialService = materialService;
         this.recyclingGuidance = recyclingGuidance;
@@ -84,12 +84,12 @@ public class ConsoleUI {
     }
 
     private void listProducts() {
-        List<Product> products = productService.listProducts();
+        List<product> products = productService.listProducts();
 
         if (products.isEmpty()) {
             System.out.println("No products found.");
         } else {
-            for (Product p : products) {
+            for (product p : products) {
                 System.out.println(productService.getDetails(p));
             }
         }
@@ -122,7 +122,7 @@ public class ConsoleUI {
     }
 
     private void calculateImpact() {
-        List<Product> products = productService.listProducts();
+        List<product> products = productService.listProducts();
 
         if (products.isEmpty()) {
             System.out.println("No products available.");
@@ -135,13 +135,13 @@ public class ConsoleUI {
         }
 
         int choice = Integer.parseInt(scanner.nextLine()) - 1;
-        Product selected = products.get(choice);
+        product selected = products.get(choice);
         double impact = productService.calculateImpact(selected);
         System.out.println("Impact score: " + impact);
     }
 
     private void showRecyclingGuidance() {
-        List<Product> products = productService.listProducts();
+        List<product> products = productService.listProducts();
 
         if (products.isEmpty()) {
             System.out.println("No products available.");
@@ -154,7 +154,7 @@ public class ConsoleUI {
         }
 
         int choice = Integer.parseInt(scanner.nextLine()) - 1;
-        Product selected = products.get(choice);
+        product selected = products.get(choice);
         System.out.println(recyclingGuidance.guidance(selected));
     }
 }

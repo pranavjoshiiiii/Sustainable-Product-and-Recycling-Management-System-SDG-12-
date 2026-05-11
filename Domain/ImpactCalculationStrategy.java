@@ -1,5 +1,5 @@
 package Domain;
 
-public interface ImpactCalculationStrategy {
-    double calculateImpact(Product product);
+public interface impactCalculationStrategy {
+    double calculateImpact(product product);
 }

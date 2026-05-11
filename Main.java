@@ -1,18 +1,18 @@
-import Application.MaterialService;
-import Application.ProductService;
-import Domain.RecyclingGuidance;
-import Domain.SimpleSumStrategy;
-import Presentation.ConsoleUI;
+import Application.materialService;
+import Application.productService;
+import Domain.recyclingGuidance;
+import Domain.simpleSumStrategy;
+import Presentation.consoleUi;
 
 public class Main {
 
     public static void main(String[] args) {
-        SimpleSumStrategy strategy = new SimpleSumStrategy();
-        ProductService productService = new ProductService(strategy);
-        MaterialService materialService = new MaterialService();
-        RecyclingGuidance recyclingGuidance = new RecyclingGuidance();
+        simpleSumStrategy strategy = new simpleSumStrategy();
+        productService productService = new productService(strategy);
+        materialService materialService = new materialService();
+        recyclingGuidance recyclingGuidance = new recyclingGuidance();
 
-        ConsoleUI ui = new ConsoleUI(productService, materialService, recyclingGuidance);
+        consoleUi ui = new consoleUi(productService, materialService, recyclingGuidance);
         ui.menuLoop();
     }
 }

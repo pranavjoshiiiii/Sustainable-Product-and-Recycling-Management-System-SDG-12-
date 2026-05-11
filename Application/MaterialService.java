@@ -1,33 +1,33 @@
 package Application;
 
-import Domain.Material;
-import Domain.RecyclingCategory;
+import Domain.material;
+import Domain.recyclingCategory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MaterialService {
+public class materialService {
 
-    private List<Material> materials;
+    private List<material> materials;
 
-    public MaterialService() {
+    public materialService() {
         this.materials = new ArrayList<>();
     }
 
     public void createMaterial(String name, double impactValue, String instructions) {
-        Material material = new Material(name, impactValue, instructions, RecyclingCategory.GENERAL);
+        material material = new material(name, impactValue, instructions, recyclingCategory.GENERAL);
         materials.add(material);
     }
 
-    public void addMaterial(Material material) {
+    public void addMaterial(material material) {
         materials.add(material);
     }
 
-    public List<Material> listMaterials() {
+    public List<material> listMaterials() {
         return materials;
     }
 
-    public String getMaterialDetails(Material material) {
+    public String getMaterialDetails(material material) {
         return material.getName() + " - impact: " + material.getImpactValue() + " - category: " + material.getRecyclingCategory().getLabel();
     }
 }
