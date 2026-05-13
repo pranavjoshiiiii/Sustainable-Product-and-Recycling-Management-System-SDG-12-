@@ -1,10 +1,10 @@
-package src.main.java.Application;
+package Application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import src.main.java.Domain.impactCalculationStrategy;
-import src.main.java.Domain.product;
+import Domain.impactCalculationStrategy;
+import Domain.product;
 
 
 public class productService {

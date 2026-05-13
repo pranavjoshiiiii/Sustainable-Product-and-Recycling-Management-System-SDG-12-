@@ -1,10 +1,10 @@
-package src.main.java.Application;
+package Application;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import src.main.java.Domain.material;
-import src.main.java.Domain.recyclingCategory;
+import Domain.material;
+import Domain.recyclingCategory;
 
 public class materialService {
 

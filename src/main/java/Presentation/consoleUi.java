@@ -1,9 +1,9 @@
-package src.main.java.Presentation;
+package Presentation;
 
-import src.main.java.Application.materialService;
-import src.main.java.Application.productService;
-import src.main.java.Domain.product;
-import src.main.java.Domain.recyclingGuidance;
+import Application.materialService;
+import Application.productService;
+import Domain.product;
+import Domain.recyclingGuidance;
 
 import java.util.List;
 import java.util.Scanner;
