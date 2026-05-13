@@ -1,11 +1,12 @@
-package src.test.java.test;
+package test;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import src.main.java.Domain.material;
-import src.main.java.Domain.product;
-import src.main.java.Domain.simpleSumStrategy;
+import Domain.material;
+import Domain.product;
+import Domain.simpleSumStrategy;
+import Domain.recyclingCategory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
