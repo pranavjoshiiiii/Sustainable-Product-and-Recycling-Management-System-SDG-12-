@@ -1,7 +1,7 @@
-package test;
+package src.test.java.test;
 
-import Application.materialService;
-import Domain.material;
+import src.main.java.Application.materialService;
+import src.main.java.Domain.material;
 
 import org.junit.jupiter.api.Test;
 

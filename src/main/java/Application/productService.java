@@ -1,9 +1,11 @@
-package Application;
+package src.main.java.Application;
 
 import java.util.ArrayList;
 import java.util.List;
-import Domain.product;
-import Domain.impactCalculationStrategy;
+
+import src.main.java.Domain.impactCalculationStrategy;
+import src.main.java.Domain.product;
+
 
 public class productService {
     private List<product> products = new ArrayList<>();

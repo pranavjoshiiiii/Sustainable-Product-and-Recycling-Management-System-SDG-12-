@@ -1,11 +1,12 @@
-package Application;
+package src.main.java.Application;
 
-import Domain.impactCalculationStrategy;
-import Domain.simpleSumStrategy;
-import Domain.weightedByLifespanStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import src.main.java.Domain.impactCalculationStrategy;
+import src.main.java.Domain.simpleSumStrategy;
+import src.main.java.Domain.weightedByLifespanStrategy;
 
 public class strategyFactory {
 

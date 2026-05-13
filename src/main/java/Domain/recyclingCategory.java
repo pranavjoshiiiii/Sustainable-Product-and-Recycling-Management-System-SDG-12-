@@ -1,4 +1,4 @@
-package Domain;
+package src.main.java.Domain;
 
 public enum recyclingCategory {
     GENERAL("General Waste", "Mixed materials"),

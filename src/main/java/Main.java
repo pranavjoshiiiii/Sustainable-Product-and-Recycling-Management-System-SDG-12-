@@ -1,12 +1,14 @@
-import Application.materialService;
-import Application.productService;
-import Application.strategyFactory;
-import Domain.impactCalculationStrategy;
-import Domain.recyclingGuidance;
-import Presentation.consoleUi;
+
 
 import java.util.List;
 import java.util.Scanner;
+
+import src.main.java.Application.materialService;
+import src.main.java.Application.productService;
+import src.main.java.Application.strategyFactory;
+import src.main.java.Domain.impactCalculationStrategy;
+import src.main.java.Domain.recyclingGuidance;
+import src.main.java.Presentation.consoleUi;
 
 public class Main {
 
