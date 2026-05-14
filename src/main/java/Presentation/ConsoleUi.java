@@ -23,32 +23,35 @@ public class ConsoleUi {
         this.scanner = new Scanner(System.in);
     }
 
-    public void menuLoop() {
-        int choice = -1;
+   public void menuLoop() {
+    int choice = -1;
 
-        while (choice != 0) {
-            printMenu();
-            choice = Integer.parseInt(scanner.nextLine());
+    while (choice != 0) {
+        printMenu();
+        choice = Integer.parseInt(scanner.nextLine());
 
-            if (choice == 1) {
-                addProduct();
-            } else if (choice == 2) {
-                listProducts();
-            } else if (choice == 3) {
-                addMaterial();
-            } else if (choice == 4) {
-                listMaterials();
-            } else if (choice == 5) {
-                calculateImpact();
-            } else if (choice == 6) {
-                showRecyclingGuidance();
-            } else if (choice == 0) {
-                System.out.println("Goodbye!");
-            } else {
-                System.out.println("Invalid option, try again.");
-            }
-        }
+        handleMenuChoice(choice);
     }
+}
+    public void handleMenuChoice(int choice) {
+    if (choice == 1) {
+        addProduct();
+    } else if (choice == 2) {
+        listProducts();
+    } else if (choice == 3) {
+        addMaterial();
+    } else if (choice == 4) {
+        listMaterials();
+    } else if (choice == 5) {
+        calculateImpact();
+    } else if (choice == 6) {
+        showRecyclingGuidance();
+    } else if (choice == 0) {
+        System.out.println("Goodbye!");
+    } else {
+        System.out.println("Invalid option, try again.");
+    }
+}
 
     public void printMenu() {
         System.out.println("--- Menu ---");
