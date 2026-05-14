@@ -3,31 +3,32 @@ package Application;
 import java.util.ArrayList;
 import java.util.List;
 
-import Domain.material;
-import Domain.recyclingCategory;
+import Domain.Material;
+import Domain.RecyclingCategory;
 
-public class materialService {
+public class MaterialService {
 
-    private List<material> materials;
+    private List<Material> materials;
 
-    public materialService() {
+    public MaterialService() {
         this.materials = new ArrayList<>();
     }
 
     public void createMaterial(String name, double impactValue, String instructions) {
-        material material = new material(name, impactValue, instructions, recyclingCategory.GENERAL);
+        Material material = new Material(name, impactValue, instructions, RecyclingCategory.GENERAL);
         materials.add(material);
     }
 
-    public void addMaterial(material material) {
+    public void addMaterial(Material material) {
         materials.add(material);
     }
 
-    public List<material> listMaterials() {
+    public List<Material> listMaterials() {
         return materials;
     }
 
-    public String getMaterialDetails(material material) {
-        return material.getName() + " - impact: " + material.getImpactValue() + " - category: " + material.getRecyclingCategory().getLabel();
+    public String getMaterialDetails(Material material) {
+        return material.getName() + " - impact: " + material.getImpactValue() + " - category: "
+                + material.getRecyclingCategory().getLabel();
     }
 }

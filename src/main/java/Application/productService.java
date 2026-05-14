@@ -3,31 +3,30 @@ package Application;
 import java.util.ArrayList;
 import java.util.List;
 
-import Domain.impactCalculationStrategy;
-import Domain.product;
+import Domain.ImpactCalculationStrategy;
+import Domain.Product;
 
+public class ProductService {
+    private List<Product> products = new ArrayList<>();
+    private ImpactCalculationStrategy strategy;
 
-public class productService {
-    private List<product> products = new ArrayList<>();
-    private impactCalculationStrategy strategy;
-
-    public productService(impactCalculationStrategy strategy) {
+    public ProductService(ImpactCalculationStrategy strategy) {
         this.strategy = strategy;
     }
 
     public void createProduct(String name, String type, int lifespan) {
-        products.add(new product(name, type, lifespan));
+        products.add(new Product(name, type, lifespan));
     }
 
-    public List<product> listProducts() {
+    public List<Product> listProducts() {
         return products;
     }
 
-    public String getDetails(product product) {
+    public String getDetails(Product product) {
         return product.getInfo();
     }
 
-    public double calculateImpact(product product) {
+    public double calculateImpact(Product product) {
         return strategy.calculateImpact(product);
     }
 }

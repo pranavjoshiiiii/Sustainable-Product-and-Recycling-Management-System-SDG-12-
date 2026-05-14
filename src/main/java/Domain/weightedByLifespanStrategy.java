@@ -2,18 +2,17 @@ package Domain;
 
 import java.util.List;
 
-public class weightedByLifespanStrategy implements impactCalculationStrategy {
+public class WeightedByLifespanStrategy implements ImpactCalculationStrategy {
 
     @Override
-    public double calculateImpact(product product) {
+    public double calculateImpact(Product product) {
         double total = 0;
-        List<material> materials = product.getMaterials();
+        List<Material> materials = product.getMaterials();
 
-        for (material m : materials) {
+        for (Material m : materials) {
             total = total + (m.getImpactValue() * product.getLifespan());
         }
 
         return total;
     }
 }
-

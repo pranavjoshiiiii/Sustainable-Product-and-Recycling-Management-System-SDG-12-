@@ -3,14 +3,14 @@ package Domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class product {
+public class Product {
 
     private String name;
     private String type;
     private int lifespan;
-    private List<material> materials;
+    private List<Material> materials;
 
-    public product(String name, String type, int lifespan) {
+    public Product(String name, String type, int lifespan) {
         this.name = name;
         this.type = type;
         this.lifespan = lifespan;
@@ -29,11 +29,11 @@ public class product {
         return lifespan;
     }
 
-    public List<material> getMaterials() {
+    public List<Material> getMaterials() {
         return materials;
     }
 
-    public void addMaterial(material material) {
+    public void addMaterial(Material material) {
         materials.add(material);
     }
 

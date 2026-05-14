@@ -1,6 +1,6 @@
 package Domain;
 
-public enum recyclingCategory {
+public enum RecyclingCategory {
     GENERAL("General Waste", "Mixed materials"),
     PLASTIC("Plastic", "Polymer-based materials"),
     METAL("Metal", "Metallic materials"),
@@ -10,7 +10,7 @@ public enum recyclingCategory {
     private String label;
     private String materialComposition;
 
-    recyclingCategory(String label, String materialComposition) {
+    RecyclingCategory(String label, String materialComposition) {
         this.label = label;
         this.materialComposition = materialComposition;
     }
