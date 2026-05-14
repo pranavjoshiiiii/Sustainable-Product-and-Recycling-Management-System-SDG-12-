@@ -123,38 +123,31 @@ public class consoleUi {
 
     private void calculateImpact() {
         List<product> products = productService.listProducts();
-
         if (products.isEmpty()) {
             System.out.println("No products available.");
             return;
         }
-
-        System.out.println("Select a product:");
-        for (int i = 0; i < products.size(); i++) {
-            System.out.println((i + 1) + ". " + products.get(i).getInfo());
-        }
-
-        int choice = Integer.parseInt(scanner.nextLine()) - 1;
-        product selected = products.get(choice);
+        product selected = selectProduct(products);
         double impact = productService.calculateImpact(selected);
         System.out.println("Impact score: " + impact);
     }
 
     private void showRecyclingGuidance() {
         List<product> products = productService.listProducts();
-
         if (products.isEmpty()) {
             System.out.println("No products available.");
             return;
         }
-
-        System.out.println("Select a product:");
-        for (int i = 0; i < products.size(); i++) {
-            System.out.println((i + 1) + ". " + products.get(i).getInfo());
-        }
-
-        int choice = Integer.parseInt(scanner.nextLine()) - 1;
-        product selected = products.get(choice);
+        product selected = selectProduct(products);
         System.out.println(recyclingGuidance.guidance(selected));
+    }
+
+    private product selectProduct(List<product> products) {
+        System.out.println("Select a product:");
+            for (int i = 0; i < products.size(); i++) {
+            System.out.println((i + 1) + ". " + products.get(i).getInfo());
+    }
+        int choice = Integer.parseInt(scanner.nextLine()) - 1;
+        return products.get(choice);
     }
 }
