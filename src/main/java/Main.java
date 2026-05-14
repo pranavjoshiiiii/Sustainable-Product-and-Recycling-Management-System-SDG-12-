@@ -1,19 +1,19 @@
 import java.util.List;
 import java.util.Scanner;
 
-import Application.materialService;
-import Application.productService;
-import Application.strategyFactory;
-import Domain.impactCalculationStrategy;
-import Domain.recyclingGuidance;
-import Presentation.consoleUi;
+import Application.MaterialService;
+import Application.ProductService;
+import Application.StrategyFactory;
+import Domain.ImpactCalculationStrategy;
+import Domain.RecyclingGuidance;
+import Presentation.ConsoleUi;
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        List<impactCalculationStrategy> strategies = strategyFactory.getAvailableStrategies();
+        List<ImpactCalculationStrategy> strategies = StrategyFactory.getAvailableStrategies();
 
         System.out.println("Select impact calculation strategy:");
         for (int i = 0; i < strategies.size(); i++) {
@@ -30,12 +30,12 @@ public class Main {
             }
         }
 
-        impactCalculationStrategy strategy = strategyFactory.create(choice);
-        productService productService = new productService(strategy);
-        materialService materialService = new materialService();
-        recyclingGuidance recyclingGuidance = new recyclingGuidance();
+        ImpactCalculationStrategy strategy = StrategyFactory.create(choice);
+        ProductService productService = new ProductService(strategy);
+        MaterialService materialService = new MaterialService();
+        RecyclingGuidance recyclingGuidance = new RecyclingGuidance();
 
-        consoleUi ui = new consoleUi(productService, materialService, recyclingGuidance);
+        ConsoleUi ui = new ConsoleUi(productService, materialService, recyclingGuidance);
         ui.menuLoop();
     }
 }
