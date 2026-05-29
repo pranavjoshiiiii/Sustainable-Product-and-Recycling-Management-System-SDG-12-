@@ -169,3 +169,7 @@ Strategy selection depends on user input. That decision logic belongs in one pla
 
 **What would happen without it?**
 The creation `if/else` would sit inside `Main` or worse, inside the UI. Any future feature needing a strategy would duplicate that block, increasing coupling.
+
+
+
+
