@@ -170,6 +170,42 @@ Strategy selection depends on user input. That decision logic belongs in one pla
 **What would happen without it?**
 The creation `if/else` would sit inside `Main` or worse, inside the UI. Any future feature needing a strategy would duplicate that block, increasing coupling.
 
+How to Build and Run the Application
 
+This project uses Gradle as its build tool. The commands below can be used to build, run, and test the application.
 
+1.macOS / Linux
 
+Before running the project for the first time, make the Gradle wrapper executable:
+
+chmod +x gradlew
+
+Build the project:
+
+./gradlew build
+
+Run the application:
+
+./gradlew run --console=plain -q
+
+Run the tests:
+
+./gradlew test
+
+2.Windows
+
+Build the project:
+
+gradlew.bat build
+
+Run the application:
+
+gradlew.bat run --console=plain -q
+
+Run the tests:
+
+gradlew.bat test
+
+The application is a console-based program that requires user input. When started, it prompts the user to select an impact calculation strategy and then displays the main menu, where products and materials can be managed and environmental impact calculations can be performed.
+
+This is clean, professional, and suitable for a university group project README.
