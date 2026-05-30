@@ -179,7 +179,7 @@ This flow was selected because it demonstrates communication between multiple pa
 
 The diagram shows how the system retrieves product materials, iterates through them, and calculates the environmental impact using lifespan weighting.
 
-![Sequence Diagram](diagrams/calculateImpact.jpeg)
+![Sequence Diagram](calculateImpact.jpeg)
 
 
 # Architecture Overview
@@ -207,35 +207,35 @@ This project uses **Gradle** as its build system. You do not need to manually co
 
 This project uses Gradle as its build tool. The commands below can be used to build, run, and test the application.
 
-1.macOS / Linux
+# 1.macOS / Linux
 
-Before running the project for the first time, make the Gradle wrapper executable:
+- Before running the project for the first time, make the Gradle wrapper executable:
 
 chmod +x gradlew
 
-Build the project:
+- Build the project:
 
 ./gradlew build
 
-Run the application:
+- Run the application:
 
 ./gradlew run --console=plain -q
 
-Run the tests:
+- Run the tests:
 
 ./gradlew test
 
-2.Windows
+# 2.Windows
 
-Build the project:
+- Build the project:
 
 gradlew.bat build
 
-Run the application:
+- Run the application:
 
 gradlew.bat run --console=plain -q
 
-Run the tests:
+- Run the tests:
 
 gradlew.bat test
 
