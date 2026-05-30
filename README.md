@@ -169,37 +169,3 @@ Strategy selection depends on user input. That decision logic belongs in one pla
 
 **What would happen without it?**
 The creation `if/else` would sit inside `Main` or worse, inside the UI. Any future feature needing a strategy would duplicate that block, increasing coupling.
-
-
-# Sequence Diagram
-
-The following sequence diagram illustrates the `calculateImpact(product)` scenario.
-
-This flow was selected because it demonstrates communication between multiple parts of the system architecture, including the strategy class, product entity, and material entity.
-
-The diagram shows how the system retrieves product materials, iterates through them, and calculates the environmental impact using lifespan weighting.
-
-![Sequence Diagram](diagrams/calculateImpact.jpeg)
-
-
-# Architecture Overview
-
-The system follows a layered architecture structure.
-
-## Presentation Layer
-
-Handles user interaction and input/output functionality.
-
-## Application Layer
-
-Contains business logic and service coordination.
-
-## Domain Layer
-
-Contains core entities such as Product and Material, along with domain-specific calculations.
-
-# How to Run the Project
-
-This project uses **Gradle** as its build system. You do not need to manually compile Java files.
-
----
