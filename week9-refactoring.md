@@ -56,7 +56,7 @@ Inside `ConsoleUi`, we had the exact same block of code written twice. Once in `
 
 This is a problem because if we ever need to change how product selection works, we would have to remember to update it in two places. That is easy to forget and causes bugs.
 
-**Before — same code copied in two places:**
+**Before same code copied in two places:**
 
 ```java
 System.out.println("Select a product:");
