@@ -46,7 +46,11 @@ public class ConsoleUi {
         calculateImpact();
     } else if (choice == 6) {
         showRecyclingGuidance();
-    } else if (choice == 0) {
+    } 
+      else if (choice == 7) {
+        addMaterialToProduct();
+    }
+    else if (choice == 0) {
         System.out.println("Goodbye!");
     } else {
         System.out.println("Invalid option, try again.");
@@ -61,6 +65,7 @@ public class ConsoleUi {
         System.out.println("4. List Materials");
         System.out.println("5. Calculate Impact");
         System.out.println("6. Recycling Guidance");
+        System.out.println("7. Add Material to Product");
         System.out.println("0. Exit");
         System.out.print("Enter choice: ");
     }
@@ -161,4 +166,30 @@ public class ConsoleUi {
         Product selected = products.get(choice);
         System.out.println(recyclingGuidance.guidance(selected));
     }
+    private void addMaterialToProduct() {
+    List<Product> products = productService.listProducts();
+    var materials = materialService.listMaterials();
+
+    if (products.isEmpty() || materials.isEmpty()) {
+        System.out.println("Add at least one product and one material first.");
+        return;
+    }
+
+    System.out.println("Select a product:");
+    for (int i = 0; i < products.size(); i++) {
+        System.out.println((i + 1) + ". " + products.get(i).getInfo());
+    }
+    int pChoice = Integer.parseInt(scanner.nextLine()) - 1;
+    Product selectedProduct = products.get(pChoice);
+
+    System.out.println("Select a material:");
+    for (int i = 0; i < materials.size(); i++) {
+        System.out.println((i + 1) + ". " + materialService.getMaterialDetails(materials.get(i)));
+    }
+    int mChoice = Integer.parseInt(scanner.nextLine()) - 1;
+    var selectedMaterial = materials.get(mChoice);
+
+    productService.addMaterialToProduct(selectedProduct, selectedMaterial);
+    System.out.println("Material linked to product!");
+}
 }

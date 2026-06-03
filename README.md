@@ -229,14 +229,14 @@ This project uses Gradle as its build tool. The commands below can be used to bu
 
 - Build the project:
 
-  - gradlew.bat build
+  - ./gradlew.bat build
 
 - Run the application:
 
-  - gradlew.bat run --console=plain -q
+  - ./gradlew.bat run --console=plain -q
 
 - Run the tests:
 
-  - gradlew.bat test
+  - ./gradlew.bat test
 
 The application is a console-based program that requires user input. When started, it prompts the user to select an impact calculation strategy and then displays the main menu, where products and materials can be managed and environmental impact calculations can be performed.

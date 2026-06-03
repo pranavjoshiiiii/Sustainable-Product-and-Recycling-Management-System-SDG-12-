@@ -29,4 +29,7 @@ public class ProductService {
     public double calculateImpact(Product product) {
         return strategy.calculateImpact(product);
     }
+    public void addMaterialToProduct(Product product, Domain.Material material) {
+    product.addMaterial(material);
+}
 }
