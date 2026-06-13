@@ -179,7 +179,7 @@ This flow was selected because it demonstrates communication between multiple pa
 
 The diagram shows how the system retrieves product materials, iterates through them, and calculates the environmental impact using lifespan weighting.
 
-![Sequence Diagram](calculateImpact.jpeg)
+![Sequence Diagram](sequence_diagram.jpeg)
 
 
 # Architecture Overview
